@@ -1,4 +1,4 @@
 package com.example.bankapp.bankservice.repositories;
 
-public interface SavingsAccRepository {
+public interface AccountRepository {
 }
