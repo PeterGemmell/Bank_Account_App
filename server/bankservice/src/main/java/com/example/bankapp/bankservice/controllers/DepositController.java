@@ -31,7 +31,7 @@ public class DepositController {
         return new ResponseEntity<>(deposit, HttpStatus.CREATED);
     }
 
-    @PatchMapping(value = "/deposits/{id")
+    @PatchMapping(value = "/deposits/{id}")
     public ResponseEntity<Deposit> updateDeposit(@RequestBody Deposit deposit){
         depositRepository.save(deposit);
         return new ResponseEntity<>(deposit, HttpStatus.OK);
