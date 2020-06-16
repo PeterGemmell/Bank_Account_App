@@ -25,31 +25,24 @@ public class Deposit {
     private String accNumber;
 
     @Column(name="deposit_amount")
-    private Integer depositAmount;
+    private Double depositAmount;
 
     @JsonIgnoreProperties(value="deposits")
     @ManyToOne
     @JoinColumn(name= "customer_id", nullable = false)
     private Customer customer;
 
-    @ManyToMany
-    @JoinTable(
-            name = "deposits_accounts",
-            joinColumns = {@JoinColumn(name="deposit_id", nullable = false, updatable = false)},
-            inverseJoinColumns = {@JoinColumn(name="account_id", nullable = false, updatable = false)}
-    )
+    @JsonIgnoreProperties(value="deposits")
+    @ManyToOne
+    @JoinColumn(name= "account_id", nullable = false)
+    private Account account;
 
-    private List<Account> accounts;
-
-
-    public Deposit(String accHolderName, String accNumber, Integer depositAmount, Customer customer){
+    public Deposit(String accHolderName, String accNumber, Double depositAmount, Customer customer, Account account){
         this.accHolderName = accHolderName;
         this.accNumber = accNumber;
-        this.date = LocalDate.now();
         this.depositAmount = depositAmount;
         this.customer = customer;
-        this.accounts = new ArrayList<>();
-
+        this.account = account;
     }
 
     public Deposit() {
@@ -87,11 +80,11 @@ public class Deposit {
         this.accNumber = accNumber;
     }
 
-    public Integer getDepositAmount() {
+    public Double getDepositAmount() {
         return depositAmount;
     }
 
-    public void setDepositAmount(Integer depositAmount) {
+    public void setDepositAmount(Double depositAmount) {
         this.depositAmount = depositAmount;
     }
 
@@ -103,11 +96,11 @@ public class Deposit {
         this.customer = customer;
     }
 
-    public List<Account> getAccounts() {
-        return accounts;
+    public Account getAccount() {
+        return account;
     }
 
-    public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
+    public void setAccount(Account account) {
+        this.account = account;
     }
 }
