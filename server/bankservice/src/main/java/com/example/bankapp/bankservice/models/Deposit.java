@@ -1,5 +1,6 @@
 package com.example.bankapp.bankservice.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -18,15 +19,14 @@ public class Deposit {
     @Column(name="acc_holder_name")
     private String accHolderName;
 
-    @Column(name="date")
-    private LocalDate date;
-
     @Column(name="acc_number")
     private String accNumber;
 
     @Column(name="deposit_amount")
     private Double depositAmount;
 
+
+    @JsonBackReference
     @JsonIgnoreProperties(value="deposits")
     @ManyToOne
     @JoinColumn(name= "customer_id", nullable = false)
@@ -48,6 +48,7 @@ public class Deposit {
     public Deposit() {
     }
 
+
     public Long getId() {
         return id;
     }
@@ -62,14 +63,6 @@ public class Deposit {
 
     public void setAccHolderName(String accHolderName) {
         this.accHolderName = accHolderName;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
     }
 
     public String getAccNumber() {

@@ -1,5 +1,6 @@
 package com.example.bankapp.bankservice.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
@@ -26,6 +27,7 @@ public class Account {
     @Column(name="current_balance")
     private Double currentBalance;
 
+    @JsonBackReference
     @JsonIgnoreProperties(value="accounts")
     @ManyToOne
     @JoinColumn(name= "customer_id", nullable = false)
