@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-
+import {Redirect} from 'react-router-dom';
+import history from './../history';
 
 class LoginContainer extends Component {
+
+
+
+
   render() {
     return (
       <div className='wrapper'>
@@ -24,7 +29,7 @@ class LoginContainer extends Component {
               <small>Password must be eight characters in length.</small>
             </div>
             <div className='submit'>
-              <button>Login</button>
+              <button onClick={() => history.push('/home')}>Login</button>
             </div>
           </form>
         </div>
