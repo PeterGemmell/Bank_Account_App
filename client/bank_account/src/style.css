@@ -14,6 +14,40 @@ SPANISH GRAY: #9A8C98
 SILVER PINK: #C9ADA7
 */
 
+a {
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 110%;
+  font-family: "Segoe UI", "Ubuntu", "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+
+    background: #4A4E69;
+    color: white;
+    font-family: "Segoe UI", "Ubuntu", "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+    /* font-family: Helvetica; */
+    font-weight: 500;
+
+}
+
+.navbar__title {
+    margin-right: auto;
+    font-size: 250%;
+    padding: 12px 16px;
+}
+
+.navbar__item {
+    padding: 16px 16px;
+    cursor: pointer;
+    vertical-align: middle;
+    color: white;
+
+}
+
 .wrapper {
   height: 97vh;
   width: 100%;
