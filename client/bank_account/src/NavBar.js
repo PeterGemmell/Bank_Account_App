@@ -7,7 +7,7 @@ const NavBar = (props) => {
     <header className='navbar'>
         <div className='navbar__title navbar__item'>G&A Online Bank</div>
         <div className='navbar__item'>
-        <a href="/coffees">Current Account</a></div>
+        <a href="/CurrentAccount">Current Account</a></div>
         <div className='navbar__item'>
         <a href="/coffees">Saving's Account</a></div>
         <div className='navbar__item'>

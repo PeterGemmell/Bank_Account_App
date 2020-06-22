@@ -14,6 +14,35 @@ SPANISH GRAY: #9A8C98
 SILVER PINK: #C9ADA7
 */
 
+.card{
+  margin: 40px;
+  box-shadow: 7px 13px 49px -5px rgba(86, 63, 130, 0.78);
+  border-radius: 30px;
+  padding: 100px 40px;
+  padding-top: 200px;
+  margin-top: 180px;
+  font-family: "Segoe UI", "Ubuntu", "Roboto", "Open Sans", "Helvetica Neue", sans-serif;
+}
+.wrap{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.left{
+  margin-right: 20px;
+}
+form{
+  display: flex;
+  align-items: baseline;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.form-label{
+  margin: 0 10px;
+  font-size: 24px;
+}
+
 a {
   color: white;
   font-weight: 400;
