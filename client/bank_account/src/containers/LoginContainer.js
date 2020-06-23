@@ -43,7 +43,7 @@ class LoginContainer extends Component {
       console.log('success')
     })
     .catch(errors => {
-      console.log(errors);
+      // console.log(errors);
       // Show errors to user.
       const formattedErrors = {}
       errors.forEach(error => formattedErrors[error.field] = error.message)

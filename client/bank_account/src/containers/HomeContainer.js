@@ -2,21 +2,24 @@ import React, { Component, Fragment } from 'react'
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavBar from '../NavBar.js';
 import CurrentAccountContainer from './CurrentAccountContainer';
+// import SavingAccountContainer from './SavingAccountContainer';
+// import DepositContainer from './DepositContainer';
+// import LoginContainer from './LoginContainer';
 
-class HomeContainer extends Component {
 
+const HomeContainer = () => {
 
-  render(){
   return(
     <Router>
+    <NavBar />
     <Fragment>
-    <NavBar/>
-    <Switch>
-    <Route path="/CurrentAccount" component={CurrentAccountContainer} />
+    <Route path="/account" component={CurrentAccountContainer} />
     <div className="card">
-      <h2><u>Welcome to your online account</u></h2>
+      <h2>Welcome to your online account Peter.</h2>
       <h3>To view information on your accounts or to make a deposit, please select an option from the above menu.</h3>
-      <h5>Warm regards, G&A Online Bank</h5>
+      <br>
+      </br>
+      <h5><b>Warm regards, G&A Online Bank</b></h5>
     <div className="wrap">
       <div className="left">
         <form>
@@ -24,12 +27,11 @@ class HomeContainer extends Component {
        </div>
     </div>
     </div>
-    </Switch>
     </Fragment>
     </Router>
 
    )
-  }
+
 }
 
 
