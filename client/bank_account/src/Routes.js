@@ -6,7 +6,6 @@ import history from './history';
 import DepositContainer from './containers/DepositContainer';
 import CurrentAccountContainer from './containers/CurrentAccountContainer';
 import NavBar from './NavBar.js';
-// So we will import the navbar in here. Render it below. Also add in other containers.
 
 
 class Routes extends Component {
