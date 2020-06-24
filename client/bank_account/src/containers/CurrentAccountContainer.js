@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Request from '../helpers/request'
 // import CurrentAccountDetail from './components/CurrentAccountDetail';
-import CurrentAccountList from './components/CurrentAccountList';
+import CurrentAccountList from '../components/CurrentAccountList';
 import NavBar from '../NavBar.js';
 
 
