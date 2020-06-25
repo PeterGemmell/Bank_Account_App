@@ -11,11 +11,17 @@ class CurrentAccount extends Component {
   render(){
     return (
 
-      <div className="items">
-      <p><b><u>{this.props.account.customerName}</u></b></p>
-      <p>Account Type:{this.props.account.accountType}</p>
-      <p>Account No:{this.props.account.accountNo}</p>
-      <p>Current Balance: £{this.props.account.currentBalance}</p>
+      <div className="card">
+      <h2 className="cust-name"><b>{this.props.account.customerName}</b></h2>
+      <h3 className="cust-name">Account Type:{this.props.account.accountType}</h3>
+      <h3 className="cust-name">Account No:{this.props.account.accountNo}</h3>
+      <h3 className="cust-name">Current Balance: £{this.props.account.currentBalance}</h3>
+      <div className="wrap">
+        <div className="left">
+          <form>
+           </form>
+         </div>
+      </div>
       </div>
     )
   }

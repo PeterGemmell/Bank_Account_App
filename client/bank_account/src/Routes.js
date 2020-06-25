@@ -5,6 +5,7 @@ import LoginContainer from './containers/LoginContainer';
 import history from './history';
 import DepositContainer from './containers/DepositContainer';
 import CurrentAccountContainer from './containers/CurrentAccountContainer';
+import SavingAccountContainer from './containers/SavingAccountContainer';
 import NavBar from './NavBar.js';
 
 
@@ -16,6 +17,7 @@ class Routes extends Component {
       <Route path='/' exact component={LoginContainer} />
       <Route path='/home' component={HomeContainer} />
       <Route path='/account' component={CurrentAccountContainer} />
+      <Route path='/saving' component={SavingAccountContainer} />
       </Switch>
       </Router>
     )

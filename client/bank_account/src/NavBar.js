@@ -9,7 +9,7 @@ const NavBar = (props) => {
         <div className='navbar__item'>
         <a href="/account">Current Account</a></div>
         <div className='navbar__item'>
-        <a href="/savingsaccount">Saving's Account</a></div>
+        <a href="/saving">Saving's Account</a></div>
         <div className='navbar__item'>
         <a href="/deposits">Make A Deposit</a></div>
          <div className='navbar__item'>
