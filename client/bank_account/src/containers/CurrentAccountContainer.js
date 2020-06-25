@@ -35,8 +35,8 @@ class CurrentAccountContainer extends Component {
  //  } // Not currently required as we are not making any edits to our account information.
 
   findAccountById(id){
-    return this.state.accounts.find((account) => {
-      return account.id === parseInt(id);
+    return this.state.accounts.find((account1) => {
+      return account1.id === parseInt(id);
     });
   }
 

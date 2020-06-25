@@ -15,7 +15,7 @@ class CurrentAccountDetail extends Component {
     return (
       <div className="items">
 
-      <h1> {this.props.account.customerName} </h1>
+      <h1> {this.props.account.account1.customerName} </h1>
       <h1> {this.props.account.accountType} </h1>
       <h2> {this.props.account.accountNo} </h2>
       <h2> {this.props.account.currentBalance} </h2>

@@ -8,11 +8,11 @@ const CurrentAccountList = (props) => {
     return(<p>Loading....</p>)
   }
 
-  const accounts = props.accounts.map((account, index) => {
+  const accounts = props.accounts.map((account1, index) => {
     return(
       <li key={index} className="component-item">
       <div className="component">
-      <CurrentAccount account={account} />
+      <CurrentAccount account={account1} />
       </div>
       </li>
     )

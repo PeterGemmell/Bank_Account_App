@@ -38,6 +38,10 @@ public class Customer {
     @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<Account> accounts;
 
+    @JsonIgnoreProperties(value="customers")
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    private List<Saving> savings;
+
     public Customer(String userName, String firstName, String lastName, String password, String email){
         this.userName = userName;
         this.firstName = firstName;
@@ -46,10 +50,19 @@ public class Customer {
         this.email = email;
         this.deposits = new ArrayList<Deposit>();
         this.accounts = new ArrayList<Account>();
+        this.savings = new ArrayList<Saving>();
 
     }
 
     public Customer() {
+    }
+
+    public List<Saving> getSavings() {
+        return savings;
+    }
+
+    public void setSavings(List<Saving> savings) {
+        this.savings = savings;
     }
 
     public List<Account> getAccounts() {

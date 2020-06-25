@@ -15,7 +15,7 @@ class CurrentAccount extends Component {
       <p><b><u>{this.props.account.customerName}</u></b></p>
       <p>Account Type:{this.props.account.accountType}</p>
       <p>Account No:{this.props.account.accountNo}</p>
-      <p>Current Balance:{this.props.account.currentBalance}</p>
+      <p>Current Balance: £{this.props.account.currentBalance}</p>
       </div>
     )
   }

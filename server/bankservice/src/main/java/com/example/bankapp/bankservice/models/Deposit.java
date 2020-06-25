@@ -37,17 +37,30 @@ public class Deposit {
     @JoinColumn(name= "account_id", nullable = false)
     private Account account;
 
-    public Deposit(String accHolderName, String accNumber, Double depositAmount, Customer customer, Account account){
+    @JsonIgnoreProperties(value="deposits")
+    @ManyToOne
+    @JoinColumn(name= "saving_id", nullable = false)
+    private Saving saving;
+
+    public Deposit(String accHolderName, String accNumber, Double depositAmount, Customer customer, Account account, Saving saving){
         this.accHolderName = accHolderName;
         this.accNumber = accNumber;
         this.depositAmount = depositAmount;
         this.customer = customer;
         this.account = account;
+        this.saving = saving;
     }
 
     public Deposit() {
     }
 
+    public Saving getSaving() {
+        return saving;
+    }
+
+    public void setSaving(Saving saving) {
+        this.saving = saving;
+    }
 
     public Long getId() {
         return id;
