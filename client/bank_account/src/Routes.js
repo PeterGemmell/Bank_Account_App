@@ -18,6 +18,7 @@ class Routes extends Component {
       <Route path='/home' component={HomeContainer} />
       <Route path='/account' component={CurrentAccountContainer} />
       <Route path='/saving' component={SavingAccountContainer} />
+      <Route path='/deposits' component={DepositContainer} />
       </Switch>
       </Router>
     )
